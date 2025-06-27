@@ -2,9 +2,9 @@
 
 public static class ProjectPaths
 {
-    private static readonly string ProjectRoot = Path.GetFullPath(
-        Path.Combine(AppContext.BaseDirectory, "..", "..", "..")
-    );
-
-    public static readonly string DataDirectory = Path.Combine(ProjectRoot, "Data");
+    public static string DataDirectory =>
+        Path.Combine(AppContext.BaseDirectory, "Data");
+    
+    public static string GetDataFilePath(string fileName) =>
+	    Path.Combine(DataDirectory, fileName);
 }

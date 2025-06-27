@@ -2,7 +2,7 @@
 {
 	public static class FileNameReader
 	{
-		public static string GetFileNameFromUserInput(string userInput)
+		public static string GetFileNameFromUserInput(string? userInput)
 		{
 			try
 			{
@@ -15,7 +15,7 @@
 			}
 		}
 
-		private static string? GetFileName(string userInput)
+		private static string? GetFileName(string? userInput)
 		{
 			if (userInput is null)
 			{
