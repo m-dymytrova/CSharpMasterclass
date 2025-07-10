@@ -24,11 +24,7 @@ public class GameDataParserApp
 			List<Game> games = FileContentReader.ReadGamesFromFile(fileName);
 			
 			// Printing video games
-			Console.WriteLine("Loaded games are:");
-			foreach (var game in games)
-			{
-				Console.WriteLine($"{game.Title} ({game.ReleaseYear}) - Rating: {game.Rating}");
-			}
+			GamePrinter.Print(games);
 
 			Console.WriteLine("Press any key to close.");
 			Console.ReadKey();

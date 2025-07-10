@@ -6,6 +6,12 @@ public static class ExceptionLogger
 	public static void Log(Exception ex)
 	{
 		string message = "";
+		string fileNameInfo = "";
+
+		if (ex is ContentReaderException contentReaderException)
+		{
+			fileNameInfo = contentReaderException.FileName;
+		}
 		
 		if (ex.InnerException != null)
 		{
@@ -16,10 +22,10 @@ public static class ExceptionLogger
 			message = ex.Message;
 		}
 		string logEntry = $"""
-		                   
 		                   [{DateTime.Now}]
-		                   Exception message: {message} // how to add file name from another exception?
+		                   Exception message: {message} {fileNameInfo}
 		                   Stack trace: {ex.StackTrace}
+		                   
 		                   """;
 		File.AppendAllText(LogFilePath, logEntry);
 	}
