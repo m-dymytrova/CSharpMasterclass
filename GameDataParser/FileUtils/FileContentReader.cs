@@ -1,15 +1,26 @@
 ﻿using System.Text.Json;
 using GameDataParser.Games;
+using GameDataParser.Exceptions;
 
 namespace GameDataParser.FileUtils;
 
 public static class FileContentReader
 {
+
 	public static List<Game> ReadGamesFromFile(string fileName)
 	{
-		string filePath = Path.Combine(ProjectPaths.DataDirectory, fileName);
-		string jsonContent = File.ReadAllText(filePath);
-		// cannot Deserialize interface, should have class?
-		return JsonSerializer.Deserialize<List<Game>>(jsonContent);
+		string filePath = null;
+		string jsonContent = null;
+		
+		try
+		{
+			filePath = ProjectPaths.GetDataFilePath(fileName);
+			jsonContent = File.ReadAllText(filePath);
+			return JsonSerializer.Deserialize<List<Game>>(jsonContent);
+		}
+		catch (Exception ex)
+		{
+			throw new ContentReaderException(fileName, jsonContent, ex);
+		}
 	}
 }
