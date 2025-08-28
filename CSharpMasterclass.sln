@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cookbook", "Cookbook\Cookbo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameDataParser", "GameDataParser\GameDataParser.csproj", "{3116ACA9-A2A4-41E3-8D9F-8A0F1522D96C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCache", "CustomCache\CustomCache.csproj", "{E7A45157-203D-45FC-9A96-E799023FD33A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{3116ACA9-A2A4-41E3-8D9F-8A0F1522D96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3116ACA9-A2A4-41E3-8D9F-8A0F1522D96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3116ACA9-A2A4-41E3-8D9F-8A0F1522D96C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7A45157-203D-45FC-9A96-E799023FD33A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7A45157-203D-45FC-9A96-E799023FD33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7A45157-203D-45FC-9A96-E799023FD33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7A45157-203D-45FC-9A96-E799023FD33A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
